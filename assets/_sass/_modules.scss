@@ -1,0 +1,64 @@
+/*************************
+		HELPERS
+*************************/
+.container {
+	max-width: 860px;
+	margin: 0 auto;
+}
+.page-section {
+	padding: 60px 0;
+}
+.section-header {
+	padding-bottom: 35px;
+	margin-bottom: 35px;
+	border-bottom: 1px solid $lightgrey;
+}
+.section-title {
+	padding-bottom: 10px;
+}
+
+/*****************************
+		 SIDEMENU
+ ****************************/
+.side-menu {
+	position: fixed;
+	top: 45%; right: 50px;
+}
+.side-menu li {
+	display: block;
+	text-align: right;
+	a {
+		display: block;
+		&:hover {
+			span { opacity: 1; }
+			i {
+				border: 1px solid $green;
+				background-color: transparent;
+				@include scale(1);
+			}
+		}
+	}
+	span {
+		display: inline-block;
+		font-size: 0.9em;
+		padding-right: 10px;
+		opacity: 0;
+		@include transition(opacity, 0.2s, ease);
+	}
+	i {
+		position: absolute;
+		top: 9px; left: auto;
+		background-color: $green;
+		width: 12px; height: 12px;
+		border-radius: 100%;
+		@include scale(0.5);
+		@include transition(all, 0.2s, ease);
+	}
+
+	// Active state
+	&.active i {
+		border: 1px solid $green;
+		background-color: transparent;
+		@include scale(1);
+	}
+}

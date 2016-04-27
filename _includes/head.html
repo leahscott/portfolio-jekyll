@@ -1,0 +1,18 @@
+<head>
+	<meta charset="UTF-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="author" content="Liam Scott">
+	<meta name="description" content="{{ site.descriiption }}">
+  	<link rel="canonical" href="{{ site.baseurl | prepend: site.url }}">
+  	<title>Liam Scott | Web Developer</title>
+	<link rel="icon" type="image/png" href="{{ "/assets/images/favicon.png" | prepend: site.baseurl }}">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<style type="text/css">
+		{% capture include_to_scssify %}
+			{% include inline.scss %}
+		{% endcapture %}
+		{{ include_to_scssify | scssify }}
+	</style>
+</head>

@@ -1,0 +1,69 @@
+$images_path: '../assets/images/';
+
+/* Page Defaults */
+html {
+	-webkit-font-smoothing: subpixel-antialiased;
+	height: 100%;
+}
+body {
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.8;
+	font-weight: 300;
+	color: $text;
+	height: 100%
+}
+::selection {
+  background: lighten($green, 40%);
+}
+::-moz-selection {
+  background: lighten($green, 40%);
+}
+a {
+	position: relative;
+	color: $green;
+	text-decoration: none;
+}
+p a {
+	font-weight: 400;
+	@include transition(border-bottom, 0.1s, ease);
+	&:hover {
+		border-bottom: 2px solid $green;
+	}
+}
+img {
+	max-width: 100%;
+}
+strong {
+	color: $darktext;
+	font-weight: 700;
+}
+h1 {
+	color: $green;
+	font-size: 3.8em;
+	font-weight: 300;
+	line-height: 1.6;
+	text-align: center;
+}
+h2 {
+	font-size: 1.2em;
+	font-weight: 300;
+	max-width: 60%;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 1.6;
+}
+h4 {
+	font-size: 1.8em;
+	font-weight: 300;
+	color: $green;
+	line-height: 1.8;
+	padding-bottom: 8px;
+}
+h5 {
+	font-size: 1.1em;
+	font-weight: 700;
+	color: $darktext;
+	padding-bottom: 7px;
+}

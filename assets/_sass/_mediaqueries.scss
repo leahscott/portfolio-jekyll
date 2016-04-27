@@ -1,0 +1,146 @@
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+	body {
+		font-size: 14px;
+	}
+	.side-menu {
+		display: none;
+	}
+	#hero .social-media {
+		right: 50%;
+		margin-right: 0;
+		z-index: 100;
+		@include translate(50%, 0);
+	}
+}
+
+/* Phone */
+@media screen and (max-width: 480px) {
+	h1 {
+		font-size: 3em;
+	}
+	h4 {
+		font-size: 2em;
+	}
+	.container {
+		padding: 0 20px;
+	}
+	.page-section {
+		padding: 40px 0;
+	}
+	.section-header {
+		margin-bottom: 0;
+		border-bottom: none;
+	}
+	.section-subtitle {
+		display: none;
+	}
+	#hero {
+		min-height: 0;
+		background-image: none;
+		.container {
+			position: relative;
+			left: 0;
+			padding: 20px;
+			@include translate(0,0);
+		}
+		.cover {
+			background-color: $green;
+			opacity: 1;
+		}
+		.name {
+			display: inline-block;
+			font-size: 1.3em;
+			padding-top: 0;
+			padding-bottom: 0;
+			border-bottom: none;
+			font-weight: 400;
+		}
+		.position {
+			display: none;
+		}
+	}
+	#about-me {
+		&.page-section {
+			padding-top: 20px;
+		}
+		.section-header {
+			display: none;
+		}
+		.selfie {
+			width: 200px; height: 200px;
+			margin-left: 0;
+			position: relative;
+			left: 50%;
+			@include translate(-50%, 0);
+		}
+	}
+	#experiences {
+		.section-header {
+			display: none;
+		}
+		.location {
+			display: none;
+		}
+		.site {
+			display: block;
+			margin-left: 0;
+		}
+	}
+	#abilities {
+		font-size: 1.1em;
+		.section-title {
+			padding-bottom: 20px;
+		}
+		.section-header {
+			padding-bottom: 10px;
+		}
+		h4 {
+			padding: 0 0 10px 0;
+		}
+		/* Override cute grid */
+		[class*='cute-'] {
+			padding: 0;
+		}
+		.skills-row li {
+			padding: 0;
+		}
+		.cta-block {
+			text-align: left;
+			width: 100%;
+		}
+		.cta-block .cta-button {
+			position: relative;
+			left: 50%;
+			@include translate(-50%, 0);
+		}
+	}
+	.social-media {
+		display: none;
+	}
+	.scroll-down {
+		display: none;
+	}
+
+	.interest {
+		&.even i, &.odd i {
+			position: relative;
+			left: 50%;
+			@include translate(-50%, 0);
+		}
+		&.even figcaption {
+			margin-left: 0;
+		}
+		&.odd figcaption {
+			margin-right: 0;
+		}
+		h4 {
+			text-align: center
+		}
+	}
+	#contact .section-header {
+		border-bottom: none;
+		padding-bottom: 10px;
+	}
+}
