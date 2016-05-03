@@ -84,9 +84,8 @@
 				opacity: 1;
 			}
 		}
-		i[class^="fa"] {
+		i[class^="icon"] {
 			font-size: 1.5em;
-			padding-right: 8px;
 		}
 	}
 	.scroll-down {
@@ -172,11 +171,18 @@
 .skills-row li {
 	padding: 0 10px;
 	border-radius: 3px;
-	i { @include transition(all,0.2s, ease); }
+
+	i:before {
+		margin: 0;
+		transition: font-size, 0.15s, ease;
+	}
 	&:hover{
 		background: lighten($lightgrey, 10%);
 		cursor: pointer;
-		i { font-size: 1.1em; }
+
+		i:before {
+			font-size: 1.1em;
+		}
 	}
 }
 .rating {
@@ -275,6 +281,9 @@
 				font-size: 1.7em;
 				margin-right: 20px;
 				opacity: 0.5;
+				&:before {
+					vertical-align: middle;
+				}
 			}
 			&.left-col { float: left; }
 			&.right-col { float: right; }
